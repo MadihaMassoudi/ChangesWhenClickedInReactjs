@@ -1,32 +1,17 @@
-import React from "react";
+import  React from 'react';
+import {add, sub, multi, division} from './Calculation'
 
 
 function App(){
-
-    let currDate = new Date();
-    currDate = currDate.getHours();
-
-    let greetings = "";
-
-    let cssStyle = {};
-
-    if(currDate >= 1 && currDate < 12){
-        greetings = "Good Morning";
-        cssStyle.color = "Green"
-    }else if(currDate >= 12 && currDate < 19){
-        greetings = "Good Afternoon";
-        cssStyle.color = "Pink"
-    }else{
-        greetings = "Good Night";
-        cssStyle.color = "purple"
-    }
-    return (
-
-    <>
-    <div>
-        <h1> Hello sir, <span style={cssStyle}> {greetings}</span> </h1>
-    </div>
-    </>
+    return(
+        <>
+    <ul>
+        <li>The Sum of two number is: {add(40, 4)}</li>
+        <li>The Difference of two number is:{sub(40, 10)}</li>
+        <li>The Multiplication of two number is:{multi(2, 9)}</li>
+        <li>The Division of two number is:{division(30, 221)}</li>
+    </ul>
+        </>
     )
 }
 
