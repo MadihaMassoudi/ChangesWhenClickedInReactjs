@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Raleway:wght@500&family=Roboto:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #d2dbdd;
+}
+
+.heading_style{
+    padding: 30px 0px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #868686;
+    background-color: white;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.container {
+    margin: 30px;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.cards {
+    width: 100%;
+    height: 100%;
+    margin: 40px 65px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: white;
+    transition: transform 0.5s; 
+}
+
+.cards:hover {
+    transform: scale(1.06); 
+    cursor: pointer;
+    background-color: rgba(255, 222, 161, 0.521);
+}
+
+.card {
+    border-radius: 20px;
+    height: 25%;
+    width: 100%;
+}
+
+img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 250px;
+    height: 210px;
+}
+
+.card_info {
+    color: grey;
+    font-size: 15px;
+    margin: 8px 8px;
+}
+
+.text {
+    margin: 10px 10px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.card_title {
+    color: black;
+    font-size: 16px;
+    margin: 0px 8px;
+    margin-top: 5px;
+    font-weight: 50px;
+    font-family: "Raleway", sans-serif;
+}
+
+button {
+    background-color: white;
+    color: grey;
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 8px 8px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-family: 'Libre Baskerville', serif;
+}
+
+button:hover {
+    background-color: rgb(175, 141, 141);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
