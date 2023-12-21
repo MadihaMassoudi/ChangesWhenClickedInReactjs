@@ -1,23 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Card from "./Cards";
 import './index.css';
-import Data from "./Data"
+import App from './App'
 
-
-ReactDOM.render(
-  <>
-  <h1 className="heading_style">List of top 5 Netflix Series in 2023</h1>
-    {Data.map((val) => {
-      return(
-        <Card
-          imgsrc={val.imgsrc}
-          sname={val.sname}
-          title={val.title}
-          link={val.link}
-        />
-      )
-    })}
-  </>,
-  document.getElementById("root")
-);
+ReactDOM.render(<> <App /> </>, document.getElementById("root"));
