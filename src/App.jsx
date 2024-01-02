@@ -1,22 +1,25 @@
-import React from "react";
-import Card from "./Cards";
-import Data from "./Data"
+import React from 'react';
+import SlotM from './SlotM';
 
-const App = () => (
-  <>
-  <h1 className="heading_style">List of top 5 Netflix Series in 2023</h1>
-    {Data.map((val) => {
-      return(
-        <Card
-          key= {val.id}
-          imgsrc={val.imgsrc}
-          sname={val.sname}
-          title={val.title}
-          link={val.link}
-        />
-      )
-    })}
-  </>
-);
+const App = () =>{
+    return(
+      <>
+          <h1 className='heading_style'> 🎰 Welcome to my <span style={{fontWeight: 'bold'}}> Slot Machine Game </span> 🎰 </h1>
+
+        <div className='MyContainer'>
+          <hr />
+          <SlotM x= '😸'  y = '😸'  z= '😸'/>
+          <hr />
+          <SlotM x= '🐬'  y= '💯'  z= '😸'/>
+          <hr />
+          <SlotM x= '🥛' y= '🥛'  z= '🥛'/>
+          <hr />
+          <SlotM x= '✈️'  y= '😄'  z= '👶' />
+          <hr />
+          <SlotM x= '👽'  y= '👽'  z= '👽' />
+        </div>
+      </>
+    )
+};
 
 export default App;
