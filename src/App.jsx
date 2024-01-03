@@ -1,25 +1,49 @@
-import React from 'react';
-import SlotM from './SlotM';
+import React, { useState } from 'react';
 
 const App = () =>{
-    return(
-      <>
-          <h1 className='heading_style'> 🎰 Welcome to my <span style={{fontWeight: 'bold'}}> Slot Machine Game </span> 🎰 </h1>
 
-        <div className='MyContainer'>
-          <hr />
-          <SlotM x= '😸'  y = '😸'  z= '😸'/>
-          <hr />
-          <SlotM x= '🐬'  y= '💯'  z= '😸'/>
-          <hr />
-          <SlotM x= '🥛' y= '🥛'  z= '🥛'/>
-          <hr />
-          <SlotM x= '✈️'  y= '😄'  z= '👶' />
-          <hr />
-          <SlotM x= '👽'  y= '👽'  z= '👽' />
-        </div>
-      </>
-    )
-};
+  let newTime = new Date().toLocaleTimeString();  
+
+  const [cTime, setCTime] = useState(newTime);
+
+  const UpdatedTime = () =>{
+    newTime = new Date().toLocaleTimeString(); 
+    setCTime(newTime);
+  }
+  return(
+    <>
+      <div>
+        <h1> {cTime} </h1>
+        <button onClick={UpdatedTime}> Get Time </button>
+      </div>
+    </>
+  )
+}
 
 export default App;
+
+
+
+// import React, { useState } from 'react';
+
+// const App = () =>{
+
+//   let newTime = new Date().toLocaleTimeString();
+//   const[cTime, setCTime] = useState(newTime);
+
+//   const UpdatedTime = () =>{
+//     newTime = new Date().toLocaleTimeString();
+//     setCTime(newTime);
+//   }
+
+//   setInterval(UpdatedTime, 1000)
+//   return (
+//     <>
+//       <div>
+//         <h1>{cTime}</h1>
+//       </div>
+//     </>
+//   )
+// }
+
+// export default App;
