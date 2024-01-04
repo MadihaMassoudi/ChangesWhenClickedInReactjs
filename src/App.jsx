@@ -1,47 +1,61 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
 const App = () =>{
 
-  let newTime = new Date().toLocaleTimeString();  
+  const purple = "#8a44ad";
+  const[bg, setBg] = useState(purple);
+  const[name, setName] = useState('Click Me');
 
-  const [cTime, setCTime] = useState(newTime);
-
-  const UpdatedTime = () =>{
-    newTime = new Date().toLocaleTimeString(); 
-    setCTime(newTime);
-  }
+  const colorChange = () =>{
+    let color = "#34495e";
+    setBg(color);
+    setName("Ouch 😟");
+  };
+  
+  const textChange = () =>{
+    let color = "#afafaf";
+    setBg(color);
+    setName("WTF 🤬");
+  };
+  
   return(
     <>
-      <div>
-        <h1> {cTime} </h1>
-        <button onClick={UpdatedTime}> Get Time </button>
-      </div>
+    <div style={ { backgroundColor: bg } }>
+      <button onClick={colorChange} onDoubleClick={textChange}> {name} </button>
+    </div>
     </>
   )
 }
 
 export default App;
 
-
-
-// import React, { useState } from 'react';
+// import React from 'react';
+// import { useState } from 'react';
 
 // const App = () =>{
 
-//   let newTime = new Date().toLocaleTimeString();
-//   const[cTime, setCTime] = useState(newTime);
+//   const purple = "#8a44ad";
+//   const[bg, setBg] = useState(purple);
+//   const[name, setName] = useState('Click Me');
 
-//   const UpdatedTime = () =>{
-//     newTime = new Date().toLocaleTimeString();
-//     setCTime(newTime);
-//   }
-
-//   setInterval(UpdatedTime, 1000)
-//   return (
+//   const colorChange = () =>{
+//     let color = "#34495e";
+//     setBg(color);
+//     setName("Ouch 😟");
+//   };
+  
+//   const textChange = () =>{
+//     let color = "#afafaf";
+//     setBg(color);
+//     setName("WTF 🤬");
+//   };
+  
+//   return(
 //     <>
-//       <div>
-//         <h1>{cTime}</h1>
-//       </div>
+//     <div style={ { backgroundColor: bg } }>
+//       <button onMouseOver={colorChange} onMouseOut={textChange}> {name} </button>
+//     </div>
 //     </>
 //   )
 // }
